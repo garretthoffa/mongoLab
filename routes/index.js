@@ -6,7 +6,7 @@ var request = require('request');
 var MongoClient = mongodb.MongoClient;
 
 // Connection URL. This is where your mongodb server is running.
-var dbUrl = 'mongodb://localhost:27017/pokemon';
+var dbUrl = 'mongodb://localhost:27017/traffic';
 
 // we will use this variable later to insert and retrieve a "collection" of data
 var collection
@@ -18,12 +18,20 @@ MongoClient.connect(dbUrl, function (err, db) {
   } else {
     // HURRAY!! We are connected. :)
     console.log('Connection established to', dbUrl);
-    
+     collection = db.collection('traffic');
+	//collection.insert(traffic, function (err, result) {
+ // if (err) {
+  //  console.log(err);
+ // } else {
+  //  console.log('Inserted documents into the "Traffic" collection. The documents inserted with "_id" are:', result.length, result);
+  }
+});
+/*    c    
     /**
      * TODO: insert data here, once we've successfully connected
      */
-  }
-});
+ // }
+//});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -32,7 +40,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/traffic', function(req, res) {
   console.log("In Trafic");
-  collection.find.toArray(function(err, result) {
+  collection.find().toArray(function(err, result) {
     if(err) {
       console.log(err);
    }else if (result.length)
