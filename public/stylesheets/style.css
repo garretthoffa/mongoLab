@@ -9,3 +9,15 @@ table,th,tr {
 border: 1px solid yellow;
 color: white;
 }
+
+#time {
+background-color:red;
+}
+
+#location {
+background-color:yellow;
+}
+
+#description {
+background-color:green;
+}
