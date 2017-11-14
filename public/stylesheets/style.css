@@ -1,8 +1,11 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image:url("http://drp0dbtwbw65p.cloudfront.net/wp-content/uploads/2015/07/1030ladiesnight.jpg");
+  color: white;
 }
 
-a {
-  color: #00B7FF;
+table,th,tr {
+border: 1px solid yellow;
+color: white;
 }

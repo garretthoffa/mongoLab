@@ -9,8 +9,8 @@
  <table ng-if='traffic.length'>
  <th>Current Incidents</th>
  <tr ng-repeat='t in traffic'>
- Time: {{t.time}}
- Place: {{t.location}}
+ {{t.time}}
+ {{t.location}}
  {{t.description}}
  </tr>
 </table>
