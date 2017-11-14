@@ -60,3 +60,10 @@ router.post('/traffic', function(req, res) {
 });
 
 module.exports = router;
+
+var traffic = [
+{
+Time:"12am",
+Location:"Provo",
+Description:"Someone ate a burrito"}
+];
