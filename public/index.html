@@ -5,5 +5,22 @@
   <script src="javascripts/app.js"></script>
   </head>
 <body>
- <body ng-app="traffic" ng-controller="MainCtrl"> 
+ <div id="app" ng-app="app" ng-controller="MainCtrl">
+ <table ng-if='traffic.length'>
+ <th>Current Incidents</th>
+ <tr ng-repeat='t in traffic'>
+ Time: {{t.time}}
+ Place: {{t.location}}
+ {{t.description}}
+ </tr>
+</table>
+<h1>Report an Incident</h1>
+<form id="addIncident" ng-submit="addTraffic()">
+Time: <input type="text" ng-model="Time"/>
+Location: <input type="text" ng-model="Location"/>
+Description: <input type="text" ng-model="Description"/>
+<input type="submit" value="Submit"/>
+</form>
+</div>
+</body>
 </html>
