@@ -27,6 +27,20 @@ function trafficFetcher ($http)
 function mainCtrl ($scope,trafficFetcher)
 {
 	$scope.traffic = []
+	$scope.reset = function()
+	{
+		var url = "traffic";
+		$.ajax({
+		url:url,
+		type: "DELETE",
+		success: function(data,textstatus)
+		{
+			var everything="<ul></ul>";
+	                $("fred").html(everything);
+	
+		}
+		})
+	}
 	$scope.addTraffic = function() {
 		var formData={Time:$scope.Time,Location:$scope.Location,Description:$scope.Description};
 		console.log(formData);

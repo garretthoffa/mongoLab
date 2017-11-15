@@ -67,6 +67,18 @@ router.post('/traffic', function(req, res) {
     });
 });
 
+router.delete('/traffic', function(req,res,next)
+{
+        console.log("In the delete Route");
+       collection .remove({}, function(err)
+        {
+         if (err) return console.error(err)
+        res.sendStatus(200);
+
+        });
+});
+
+
 module.exports = router;
 
 var traffic = [
