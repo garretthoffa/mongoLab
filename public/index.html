@@ -6,14 +6,14 @@
   </head>
 <body>
  <div id="app" ng-app="app" ng-controller="MainCtrl">
- <table>
- <th>Current Incidents</th>
- <tr ng-repeat='t in traffic'>
+ <h1>Current Incidents</h1>
+ <ul ng-if='traffic.length' id="fred" >
+ <li ng-repeat='t in traffic'>
  Time: {{t.Time}}<br>
  Location: {{t.Location}}<br>
  Description: {{t.Description}}<br>
- </tr>
-</table>
+ </li>
+</ul>
 <button type="button" ng-click="reset()">Clear all incidents</button>
 <h1>Report an Incident</h1>
 <form id="addIncident" ng-submit="addTraffic()">
