@@ -35,9 +35,10 @@ function mainCtrl ($scope,trafficFetcher)
 		type: "DELETE",
 		success: function(data,textstatus)
 		{
-			var everything="<ul></ul>";
+			var everything="<ul id='fred'></ul>";
 	                $("fred").html(everything);
-	
+			window.location.reload(true);
+		//	trafficFetcher.get()
 		}
 		})
 	}
@@ -46,6 +47,9 @@ function mainCtrl ($scope,trafficFetcher)
 		console.log(formData);
 		trafficFetcher.post(formData);
 		$scope.traffic.push(formData);
+		$scope.Time='';
+		$scope.Location='';
+		$scope.Description='';
 	}
 	trafficFetcher.get()
 	  .then(function (data) {
