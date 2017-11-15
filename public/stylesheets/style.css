@@ -5,9 +5,12 @@ body {
   color: white;
 }
 
-table,th,tr {
-border: 1px solid yellow;
+li {
 color: white;
+}
+
+h1 {
+color: yellow;
 }
 
 #time {
